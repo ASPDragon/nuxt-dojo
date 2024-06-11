@@ -1,6 +1,10 @@
 <template>
     <div>
-        <p>Products</p>
+        <div class="grid grid-cols-4 gap-5">
+            <div v-for="product in products" :key="product.id">
+                <NuxtLink :to="`/products/${product.id}`">{{ product.title }}</NuxtLink>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -9,7 +13,7 @@
         layout: 'products'
     });
 
-    await useFetch('');
+    const { data: products } = await useFetch('https://fakestoreapi.com/products');
 </script>
 
 <style scoped>
