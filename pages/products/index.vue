@@ -8,6 +8,8 @@
     definePageMeta({
         layout: 'products'
     });
+
+    await useFetch('');
 </script>
 
 <style scoped>
