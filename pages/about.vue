@@ -5,11 +5,17 @@
             repellat! Sunt deleniti temporibus nemo quae ut quas sapiente laborum eveniet?</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, 
             repellat! Sunt deleniti temporibus nemo quae ut quas sapiente laborum eveniet?</p>
+            <div>{{  data }}</div>
     </div>
 </template>
 
 <script setup>
-
+    const { data } = await useFetch('/api/ninja?name=mario', {
+        method: 'post',
+        body: {
+            age: '34',
+        },
+    });
 </script>
 
 <style scoped>
