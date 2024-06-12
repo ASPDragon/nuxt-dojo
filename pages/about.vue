@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-    const { data } = await useFetch('/api/ninja?name=mario', {
+    const { data } = await useFetch('/api/ninja?name=sergei', {
         method: 'post',
         body: {
             age: '34',
