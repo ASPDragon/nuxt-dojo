@@ -10,12 +10,7 @@
 </template>
 
 <script setup>
-    const { data } = await useFetch('/api/ninja?name=sergei', {
-        method: 'post',
-        body: {
-            age: '34',
-        },
-    });
+    const { data } = await useFetch('/api/currency/USD');
 </script>
 
 <style scoped>
